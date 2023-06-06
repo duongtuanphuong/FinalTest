@@ -1,0 +1,42 @@
+<table>
+    <thead>
+      <tr>
+        <th>Mã</th>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Địa chỉ</th>
+        <th>Giới tính</th>
+        <th>Xem chi tiết</th>
+        <th>Hành động</th>
+        <th>Chọn</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listEmployees">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>
+          <img src="{{item.thumbnail}}" width="60" height="60" style="object-fit: cover;" alt="">
+        </td>
+        <td>{{item.age}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.sex}}</td>
+        <td>
+          <button routerLink="detail/{{item.id}}">Xem chi tiết</button>
+        </td>
+        <td>
+            <button routerLink="edit/{{item.id}}">Sửa</button>
+            <button (click)="deleleEmployee(item.id)" >Xoá</button>
+        </td>
+        <td>
+          <input type="checkbox" (change)="onSelectDelete($event)" [value]="item.id">
+        </td>
+      </tr>
+    </tbody>
+</table>
+  
+
+<button *ngIf="listDetele != []" (click)="deleteEmployees()">Delete mutiple</button>
+<br>
+
+<button routerLink="create">Đăng ký</button>

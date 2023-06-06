@@ -1,0 +1,30 @@
+<form [formGroup]="employeeForm" (ngSubmit)="createEmployee()">
+
+    <label for="">
+        Id : <input type="text" formControlName="id">
+    </label>
+    <label for="">
+        name : <input type="text" formControlName="name">
+    </label>
+    <label for="">
+        thumbnail : <input type="text" formControlName="thumbnail">
+    </label>
+    <label for="">
+      age : <input type="text" formControlName="age" required>
+      <div *ngIf="age?.invalid && (age?.dirty ?? false || age?.touched ?? false)">
+        <div *ngIf="age?.errors?.['required'] ?? false">
+          Age is required.
+        </div>
+        <div *ngIf="age?.errors?.['min'] ?? age?.errors?.['max'] ?? false">
+          Age must be between 18 and 60.
+        </div>
+      </div>
+    </label>
+    <label for="">
+        address : <input type="text" formControlName="address">
+    </label>
+    <label for="">
+        sex : <input type="text" formControlName="sex">
+    </label>
+    <button type="submit">Đăng ký</button>
+</form>

@@ -1,0 +1,20 @@
+
+<form [formGroup]="employeeForm" (ngSubmit)="editEmpolyee()">
+
+    <label for="">
+        Id : <input type="text" formControlName="id">
+    </label>
+    <label for="">
+        name : <input type="text" formControlName="name">
+    </label>
+    <label for="">
+        age : <input type="text" formControlName="age">
+    </label>
+    <label for="">
+        address : <input type="text" formControlName="address">
+    </label>
+    <label for="">
+        sex : <input type="text" formControlName="sex">
+    </label>
+    <button type="submit">Sửa</button>
+</form>

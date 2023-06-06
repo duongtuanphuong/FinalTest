@@ -1,0 +1,20 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "abcxyz",
+      "thumbnail": "https://static-images.vnncdn.net/files/publish/2022/9/3/bien-vo-cuc-thai-binh-346.jpeg",
+      "age": "21",
+      "address": "bg",
+      "sex": "nam"
+    },
+    {
+      "id": "2",
+      "name": "abcxyz",
+      "thumbnail": "https://static-images.vnncdn.net/files/publish/2022/9/3/bien-vo-cuc-thai-binh-346.jpeg",
+      "age": "21",
+      "address": "bg",
+      "sex": "nam"
+    }
+  ]
+}
